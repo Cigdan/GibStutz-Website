@@ -1,4 +1,3 @@
-import React from "react";
 import landingPage from "./landingPage.module.scss";
 import highlight from "../../assets/videos/highlight.mp4";
 
