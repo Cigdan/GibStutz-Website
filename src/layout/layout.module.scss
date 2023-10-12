@@ -1,0 +1,45 @@
+@import '../index.scss';
+
+
+.header {
+    z-index: 100;
+    box-sizing: border-box;
+    background: linear-gradient($primary, rgba($primary, 0.0));
+    position: absolute;
+    width: 100%;
+    right: 0;
+    padding: 0.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.header:hover {
+    background-color: $primary;
+    padding: 1rem 4rem;
+}
+
+.header img {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.header:hover img {
+    transform: scale(1.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .nav {
+        display: none;
+    }
+}

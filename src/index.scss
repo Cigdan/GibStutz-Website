@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Sarabun:wght@100;300;400;500;600&display=swap');
+
+$primary: #101419;
+$secondary: whitesmoke;
+$accent-1: #468C98;
+$accent-2: #476C9B;
+$accent-3: #984447;
+
+
+:root {
+  font-family: 'Sarabun', sans-serif;
+  color: $secondary;
+  background-color: $primary;
+  overflow-x: hidden;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  color: $secondary;
+  font-weight: 400;
+  font-size: 14pt;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, $accent-1, $accent-2);
+}
+
+
