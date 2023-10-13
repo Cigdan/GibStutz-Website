@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={layout.header}>
       <div>
-        <img src={logo} width="60px" height="60px" />
+        <img src={logo} width="60px" height="60px" alt="GibStutz Logo" />
       </div>
       <nav>
         <ul className={layout.nav}>

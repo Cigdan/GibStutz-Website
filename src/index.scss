@@ -32,7 +32,8 @@ body{
 }
 
 .btn:hover {
-  background-image: linear-gradient(to right, $accent-1, $accent-2);
+  background-image: linear-gradient(to right, rgba($accent-1, 0.6), rgba($accent-2, 0.6));
+  filter: brightness(125%)
 }
 
 
