@@ -1,14 +1,13 @@
 import landingPage from "./landingPage.module.scss";
-import highlight from "../../assets/videos/highlight.mp4";
 
 export default function Hero() {
   return (
     <>
       <div className={landingPage.heroContainer}>
         <video className={landingPage.heroVideo} autoPlay muted loop>
-          <source src={highlight} type="video/mp4" />
+          <source src="https://res.cloudinary.com/dvvmyybrf/video/upload/f_auto:video,q_auto:eco/zdqa9eety3917xwzbwrh#10" type="video/mp4"  />
           Video couldn't be loaded
-        </video>
+          </video>
         <div className={landingPage.heroText}>
           <span>
             <h1 className={landingPage.title}>GIBSTUTZ</h1>

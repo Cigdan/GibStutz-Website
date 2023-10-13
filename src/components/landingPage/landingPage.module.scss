@@ -28,6 +28,7 @@
 
 
 .heroVideo {
+    border: 0;
     z-index: 0;
     position: absolute;
     box-sizing: border-box;
@@ -50,6 +51,7 @@
     background-color: rgba($primary, 0.2);
     padding: 1rem 2rem;
     border-radius: 1rem;
+    animation: background 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -61,6 +63,15 @@
     100% {
         opacity: 100%;
         transform: translateX(0);
+    }
+  }
+@keyframes background {
+    0% {
+      opacity: 0%;
+    }
+  
+    100% {
+        opacity: 100%;
     }
   }
 
