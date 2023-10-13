@@ -5,7 +5,7 @@ export default function Hero() {
     <>
       <div className={landingPage.heroContainer}>
         <video className={landingPage.heroVideo} autoPlay muted loop>
-          <source src="https://res.cloudinary.com/dvvmyybrf/video/upload/f_auto:video,q_auto:eco/zdqa9eety3917xwzbwrh#10" type="video/mp4"  />
+          <source src="https://res.cloudinary.com/dvvmyybrf/video/upload/f_auto:video,q_auto/zdqa9eety3917xwzbwrh#10" type="video/mp4"  />
           Video couldn't be loaded
           </video>
         <div className={landingPage.heroText}>
