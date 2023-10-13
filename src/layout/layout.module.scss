@@ -40,9 +40,23 @@
     margin: 0;
 }
 
+.burger  {
+    height: 3rem;
+    width: 3rem;
+    display: none;
+}
 
 @media only screen and (max-width: 800px) {
     .nav {
         display: none;
+    }
+    .header{
+        padding: 1rem;
+    }
+    .header:hover {
+        padding: 1.5rem;
+    }
+    .burger {
+        display: block;
     }
 }
