@@ -29,8 +29,8 @@
 
 .heroVideo {
     border: 0;
-    z-index: 0;
-    position: absolute;
+    z-index: -10;
+    position: fixed;
     box-sizing: border-box;
     object-fit: cover;
     filter: blur(4px) saturate(150%);
@@ -53,6 +53,22 @@
     border-radius: 1rem;
     animation: background 1s ease-in-out;
 }
+
+.arrowContainer {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 4rem;
+}
+
+.arrowContainer svg {
+    height: 3rem;
+    width: 3rem;
+    cursor: pointer;
+}
+
 
 @keyframes fadeIn {
     0% {
