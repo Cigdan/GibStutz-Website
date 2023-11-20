@@ -11,7 +11,7 @@ export default function Header() {
       <nav>
         <ul className={layout.nav}>
           <li className='btn'>Home</li>
-          <li className='btn'>Route #2</li>
+          <li className='btn'>Stats</li>
           <li className='btn'>Route #3</li>
           <li className='btn'>Route #4</li>
         </ul>

@@ -54,19 +54,10 @@
     animation: background 1s ease-in-out;
 }
 
-.arrowContainer {
-    scroll-behavior: smooth;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 4rem;
-}
-
-.arrowContainer svg {
-    height: 3rem;
-    width: 3rem;
-    cursor: pointer;
+.sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 

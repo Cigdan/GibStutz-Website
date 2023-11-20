@@ -1,0 +1,21 @@
+.arrowContainer {
+    scroll-behavior: smooth;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 4rem;
+}
+
+.arrowContainer svg {
+    height: 3rem;
+    width: 3rem;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
