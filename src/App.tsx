@@ -32,7 +32,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "/home",
+      path: "home",
       element: (
         <>
           <Header />
@@ -42,7 +42,7 @@ function App() {
     },
     {
       path: "*",
-      element: <Navigate to="/home" />,
+      element: <Navigate to="home" />,
     },
   ]);
 
