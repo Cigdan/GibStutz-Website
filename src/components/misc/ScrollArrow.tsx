@@ -1,21 +1,18 @@
 import { IoCaretDownCircleOutline } from "react-icons/io5";
 import scrollArrow from "./scrollArrow.module.scss";
+import React, {useContext} from "react";
+import RefsContext from "../../context/RefsContext";
+import { scrollTo } from "../../functions/routing";
 
 type ScrollArrowProps = {
-  scrollRef: React.RefObject<HTMLDivElement>;
   name: string;
 };
 
 export default function ScrollArrow(props: ScrollArrowProps) {
-  const scrollRef = props.scrollRef;
-  const executeScroll = () => {
-    if (props.scrollRef) {
-      scrollRef.current?.scrollIntoView();
-    }
-  };
+  const {setCurrentSection, refs} = useContext(RefsContext);
   return (
     <div className={scrollArrow.arrowContainer}>
-      <span className={scrollArrow.link} onClick={() => executeScroll()}>
+      <span className={scrollArrow.link} onClick={() => scrollTo(props.name, refs, setCurrentSection)}>
         <span>Stats</span>
         <span>
           <IoCaretDownCircleOutline />

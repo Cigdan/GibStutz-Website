@@ -1,19 +1,17 @@
 import StatCard from "./StatCard";
 import stats from "./stats.module.scss";
 import landingPage from "./landingPage.module.scss";
+import RefsContext from "../../context/RefsContext";
 
 import { IoGameController } from "react-icons/io5";
 import { IoTrophy } from "react-icons/io5";
 import { IoWallet } from "react-icons/io5";
+import React, { useContext } from "react";
 
-type StatsProps = {
-    statsRef: React.RefObject<HTMLDivElement>;
-}
-
-export default function Stats(props: StatsProps) {
-  console.log(props);
+export default function Stats() {
+  const {refs} = useContext(RefsContext);
   return (
-    <div className={stats.statContainer} ref={props.statsRef}>
+    <div className={stats.statContainer} ref={refs[1].ref}>
         <h1 className={landingPage.sectionTitle}>Stats</h1>
         <div className={stats.statCardContainer}>
             <StatCard title="Tournaments Played" amount={[100,3]} icon={IoGameController}/>
