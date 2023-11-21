@@ -13,7 +13,7 @@ export default function ScrollArrow(props: ScrollArrowProps) {
   return (
     <div className={scrollArrow.arrowContainer}>
       <span className={scrollArrow.link} onClick={() => scrollToSection(props.name, refs, setCurrentSection)}>
-        <span>Stats</span>
+        <span className={scrollArrow.text}>{props.name}</span>
         <span>
           <IoCaretDownCircleOutline />
         </span>

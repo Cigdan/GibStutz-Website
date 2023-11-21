@@ -15,13 +15,13 @@ export default function Hero() {
           />
           Video couldnt be loaded
         </video>
-        <ScrollArrow name={"stats"}/>
         <div className={landingPage.heroText}>
           <span>
             <h1 className={landingPage.title}>GIBSTUTZ</h1>
             <h2 className={landingPage.subtitle}>suscht Schliere njeri</h2>
           </span>
         </div>
+        <ScrollArrow name={"stats"}/>
       </div>
     </>
   );

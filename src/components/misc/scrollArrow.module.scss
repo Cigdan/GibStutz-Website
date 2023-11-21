@@ -3,8 +3,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
-    bottom: 4rem;
+    align-items: end;
+    position: relative;
+    height: fit-content;
+    height: 90%;
 }
 
 .arrowContainer svg {
@@ -18,4 +20,8 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.text::first-letter {
+    text-transform: uppercase;
 }
