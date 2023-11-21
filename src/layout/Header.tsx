@@ -1,7 +1,7 @@
 import layout from "./layout.module.scss";
 import logo from "../assets/images/logo.png";
 import { HiMenuAlt3 } from "react-icons/hi";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import RefsContext from "../context/RefsContext";
 import { scrollTo } from "../functions/routing";
 

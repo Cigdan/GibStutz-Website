@@ -14,7 +14,7 @@ type RefsContextType = {
 const RefsContext = createContext<RefsContextType>({
     refs : [],
     currentSection : null,
-    setCurrentSection: (value) => {}
+    setCurrentSection: (value) => {value}
 })
 
 

@@ -1,6 +1,6 @@
 import { IoCaretDownCircleOutline } from "react-icons/io5";
 import scrollArrow from "./scrollArrow.module.scss";
-import React, {useContext} from "react";
+import {useContext} from "react";
 import RefsContext from "../../context/RefsContext";
 import { scrollTo } from "../../functions/routing";
 

@@ -2,7 +2,7 @@ import Hero from "./Hero";
 import Stats from "./Stats";
 import RefsContext from "../../context/RefsContext";
 import { useSearchParams } from "react-router-dom";
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 export default function LandingPage() {
   const [searchParams, setSearchParams] = useSearchParams();

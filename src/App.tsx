@@ -1,7 +1,7 @@
 import Header from "./layout/Header";
 import LandingPage from "./components/landingPage/LandingPage";
 import RefsContext from "./context/RefsContext";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import {
   createBrowserRouter,

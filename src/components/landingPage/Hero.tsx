@@ -1,7 +1,7 @@
 import ScrollArrow from "../misc/ScrollArrow";
 import landingPage from "./landingPage.module.scss";
 import RefsContext from "../../context/RefsContext";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 export default function Hero() {
   const {refs} = useContext(RefsContext);

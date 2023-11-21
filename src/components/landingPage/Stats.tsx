@@ -6,7 +6,7 @@ import RefsContext from "../../context/RefsContext";
 import { IoGameController } from "react-icons/io5";
 import { IoTrophy } from "react-icons/io5";
 import { IoWallet } from "react-icons/io5";
-import React, { useContext } from "react";
+import { useContext } from "react";
 
 export default function Stats() {
   const {refs} = useContext(RefsContext);
