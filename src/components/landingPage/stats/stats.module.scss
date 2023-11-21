@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import "../../../index.scss";
 
 .statCard {
     width: 20rem;
@@ -20,17 +20,6 @@
 .statCard h2 {
     padding-top: 0;
     margin-top: 0;
-}
-
-.statContainer {
-    width: 100%;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    background-color: rgba($primary, 0.9);
 }
 
 .statCard svg {

@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import Stats from "./Stats";
+import Stats from "./stats/Stats";
 import RefsContext from "../../context/RefsContext";
 import { useSearchParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
