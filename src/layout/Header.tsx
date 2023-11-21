@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { useContext } from "react";
 import RefsContext from "../context/RefsContext";
-import { scrollTo } from "../functions/routing";
+import { scrollToSection } from "../functions/routing";
 
 export default function Header() {
   const { setCurrentSection, refs } = useContext(RefsContext);
@@ -12,7 +12,7 @@ export default function Header() {
     <header className={layout.header}>
       <div>
         <img
-          onClick={() => scrollTo("home", refs, setCurrentSection)}
+          onClick={() => scrollToSection("home", refs, setCurrentSection)}
           src={logo}
           width="60px"
           height="60px"
@@ -22,13 +22,13 @@ export default function Header() {
       <nav>
         <ul className={layout.nav}>
           <li
-            onClick={() => scrollTo("home", refs, setCurrentSection)}
+            onClick={() => scrollToSection("home", refs, setCurrentSection)}
             className="btn"
           >
             Home
           </li>
           <li
-            onClick={() => scrollTo("stats", refs, setCurrentSection)}
+            onClick={() => scrollToSection("stats", refs, setCurrentSection)}
             className="btn"
           >
             Stats

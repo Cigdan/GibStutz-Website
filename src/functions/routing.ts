@@ -6,7 +6,7 @@ type ScrollType = {
 }
 
 
-export function scrollTo(name : string, refs : ScrollType[], setCurrentSection : (value: string) => void) {
+export function scrollToSection(name : string, refs : ScrollType[], setCurrentSection : (value: string) => void) {
     setCurrentSection(name);
     const ref = findRef(refs, name);
     if (ref) {
