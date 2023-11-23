@@ -7,7 +7,6 @@
     flex-wrap: wrap;
     gap: 2rem;
     box-sizing: border-box;
-    height: 100%;
     width: 100%;
     padding: 0 3%;
     align-items: center;
@@ -17,10 +16,13 @@
 .card {
     width: 20rem;
     border-radius: 1rem;
-    max-width: 70vw;
+    min-width: 16rem;
+    max-width: 15vw;
+    max-height: 24rem;
     background-image: linear-gradient(90deg, $accent-1,$accent-2);
     overflow: hidden;
     cursor: pointer;
+
 }
 .card:hover .cardImage img {
     transform: scale(0.9);
@@ -28,25 +30,47 @@
 }
 .cardImage  {
     overflow: hidden;
-    max-width: fit-content;
-    aspect-ratio: 1/1;
 }
 
 .cardImage img {
-    transition: all 0.2s ease-in-out;
-    max-width: fit-content;
+    transition: all 0.2s;
     width: 100%;
-    height: 100%;  
-    aspect-ratio: 1/1;
     object-fit: cover;
+    aspect-ratio: 1/1;
     border-radius: 1rem 1rem 0 0;
 }
 
 .cardText {
+    box-sizing: border-box;
+    min-width: fit-content;
     height: 50%;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.dialog {
+    box-sizing: content-box;
+    max-width: 50%;
+    min-width: 25%;
+    padding: 0;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    background-color: transparent;
+    background-image: linear-gradient(90deg, rgba($accent-1, 0.98), rgba($accent-2, 0.98), rgba($accent-3, 0.98));
+}
+
+.dialog::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.dialogContent {
+    padding: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+    
 }
