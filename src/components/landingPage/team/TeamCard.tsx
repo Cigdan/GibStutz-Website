@@ -5,6 +5,8 @@ import TeamDialog from './TeamDialog';
 
 type TeamCardProps = {
   name: string;
+  video: string;
+  twitter: string;
 };
 
 export default function TeamCard(props: TeamCardProps) {
@@ -24,7 +26,7 @@ export default function TeamCard(props: TeamCardProps) {
 
   return (
     <>
-    <TeamDialog name={props.name} image={image} />
+    <TeamDialog name={props.name} video={props.video} twitter={props.twitter} />
     <div className={team.card} onClick={() => openDialog()}>
       <div className={team.cardImage}>
         {image && <img src={image} alt={`${props.name} Profile Picture`} />}

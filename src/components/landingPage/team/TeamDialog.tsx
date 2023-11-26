@@ -1,20 +1,41 @@
-import team from "./team.module.scss"
+import { useState } from "react";
+import team from "./team.module.scss";
+import { IoLogoTwitter } from "react-icons/io5";
 
 type TeamDialogProps = {
-    name: string,
-    image: string | null
-}
+  name: string;
+  video: string;
+  twitter: string;
+};
 
 export default function TeamDialog(props: TeamDialogProps) {
-    function cancel() {
-        const dialog = document.getElementById(props.name) as HTMLDialogElement;
-        dialog.close()
-    }
+    const [image, setImage] = useState<string | null>(null)
+  function cancel() {
+    const dialog = document.getElementById(props.name) as HTMLDialogElement;
+    dialog.close();
+  }
+
+  import(`../../../assets/images/roster/${props.name}.webp`).then((path) => {
+    setImage(path.default)
+  })
+
   return (
     <dialog onClick={() => cancel()} id={props.name} className={team.dialog}>
-        <div onClick={(e) => e.stopPropagation()} className={team.dialogContent}>
-            <h2>{props.name}</h2>
+      <div onClick={(e) => e.stopPropagation()} className={team.dialogContent}>
+        <div className={team.topBar}>
+          {image && <img className={team.icon} alt="Icon" height="64" width="64" src={image}/>}
+          <h2>{props.name}</h2>
+          <a href={`https://twitter.com/${props.twitter}`} className={team.iconTwitter}><IoLogoTwitter/></a>
         </div>
+        <iframe
+          className={team.video}
+          src={`https://www.youtube.com/embed/${props.video}`}
+          title="YouTube video player"
+          allow="accelerometer; clipboard-write; encrypted-media; web-share"
+          allowFullScreen
+        ></iframe>
+        
+      </div>
     </dialog>
-  )
+  );
 }
