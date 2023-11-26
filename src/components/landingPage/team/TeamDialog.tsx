@@ -6,6 +6,8 @@ type TeamDialogProps = {
   name: string;
   video: string;
   twitter: string;
+  dialogIsOpen: boolean;
+  setDialogIsOpen: (isOpen: boolean) => void;
 };
 
 export default function TeamDialog(props: TeamDialogProps) {
@@ -13,6 +15,7 @@ export default function TeamDialog(props: TeamDialogProps) {
   function cancel() {
     const dialog = document.getElementById(props.name) as HTMLDialogElement;
     dialog.close();
+    props.setDialogIsOpen(false);
   }
 
   import(`../../../assets/images/roster/${props.name}.webp`).then((path) => {
@@ -27,13 +30,13 @@ export default function TeamDialog(props: TeamDialogProps) {
           <h2>{props.name}</h2>
           <a href={`https://twitter.com/${props.twitter}`} className={team.iconTwitter}><IoLogoTwitter/></a>
         </div>
-        <iframe
+        {props.dialogIsOpen && <iframe
           className={team.video}
           src={`https://www.youtube.com/embed/${props.video}`}
           title="YouTube video player"
           allow="accelerometer; clipboard-write; encrypted-media; web-share"
           allowFullScreen
-        ></iframe>
+        ></iframe>}
         
       </div>
     </dialog>

@@ -11,11 +11,14 @@ type TeamCardProps = {
 
 export default function TeamCard(props: TeamCardProps) {
     const [image, setImage] = useState<string | null>(null)
+    
+    const [dialogIsOpen, setDialogIsOpen] = useState<boolean>(false)
 
     function openDialog() {
         const dialog = document.getElementById(props.name) as HTMLDialogElement;
         if(!dialog.open) {
             dialog.showModal();
+            setDialogIsOpen(true)
         }
         
     }
@@ -26,7 +29,7 @@ export default function TeamCard(props: TeamCardProps) {
 
   return (
     <>
-    <TeamDialog name={props.name} video={props.video} twitter={props.twitter} />
+    <TeamDialog name={props.name} video={props.video} twitter={props.twitter} dialogIsOpen={dialogIsOpen} setDialogIsOpen={setDialogIsOpen} />
     <div className={team.card} onClick={() => openDialog()}>
       <div className={team.cardImage}>
         {image && <img src={image} alt={`${props.name} Profile Picture`} />}
