@@ -33,7 +33,12 @@ export default function Header() {
           >
             Stats
           </li>
-          <li className="btn">Route #3</li>
+          <li
+            onClick={() => scrollToSection("team", refs, setCurrentSection)}
+            className="btn"
+          >
+            Team
+          </li>
           <li className="btn">Route #4</li>
         </ul>
       </nav>

@@ -1,9 +1,13 @@
 import Hero from "./Hero";
 import Stats from "./stats/Stats";
-import RefsContext from "../../context/RefsContext";
+import Team from "./team/Team";
+import landingPage from "./landingPage.module.scss";
+
 import { useSearchParams } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { scrollToSection } from "../../functions/routing";
+
+import RefsContext from "../../context/RefsContext";
 
 export default function LandingPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,7 +20,6 @@ export default function LandingPage() {
   }, []);
   useEffect(() => {
     if (currentSection !== null) {
-      console.log(currentSection)
       searchParams.set("section", currentSection);
       setSearchParams(searchParams);
     }
@@ -24,7 +27,10 @@ export default function LandingPage() {
   return (
     <>
       <Hero />
+      <span className={landingPage.mainContent}>
       <Stats />
+      <Team />
+      </span>
     </>
   );
 }

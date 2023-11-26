@@ -7,6 +7,7 @@ import { IoGameController } from "react-icons/io5";
 import { IoTrophy } from "react-icons/io5";
 import { IoWallet } from "react-icons/io5";
 import { useContext } from "react";
+import ScrollArrow from "../../misc/ScrollArrow";
 
 export default function Stats() {
   const {refs} = useContext(RefsContext);
@@ -18,6 +19,7 @@ export default function Stats() {
             <StatCard title="Tournaments Won" amount={[100,0]} icon={IoTrophy}/>
             <StatCard title="Pricemoney Won" amount={[100,0]} icon={IoWallet} suffix="$"/>
         </div>
+        <ScrollArrow name={"team"}/>
     </div>
   )
 }

@@ -9,7 +9,6 @@ $accent-3: #984447;
 
 :root {
   font-family: 'Sarabun', sans-serif;
-  color: $secondary;
   background-color: $primary;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -35,6 +34,10 @@ body{
 .btn:hover {
   background-image: linear-gradient(to right, rgba($accent-1, 0.6), rgba($accent-2, 0.6));
   filter: brightness(125%)
+}
+
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+  color: $secondary;
 }
 
 
