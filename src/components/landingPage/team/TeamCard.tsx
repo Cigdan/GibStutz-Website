@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import team from './team.module.scss';
 
 import TeamDialog from './TeamDialog';
