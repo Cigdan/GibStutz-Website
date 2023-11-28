@@ -19,7 +19,7 @@ export default function Stats() {
             <StatCard title="Tournaments Won" amount={[100,0]} icon={IoTrophy}/>
             <StatCard title="Pricemoney Won" amount={[100,0]} icon={IoWallet} suffix="$"/>
         </div>
-        <ScrollArrow name={"team"}/>
+        <ScrollArrow name="team"/>
     </div>
   )
 }

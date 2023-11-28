@@ -28,8 +28,8 @@ export default function LandingPage() {
     <>
       <Hero />
       <span className={landingPage.mainContent}>
-      <Stats />
-      <Team />
+        <Stats />
+        <Team />
       </span>
     </>
   );
