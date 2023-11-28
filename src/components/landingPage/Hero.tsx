@@ -21,7 +21,7 @@ export default function Hero() {
             <h2 className={landingPage.subtitle}>suscht Schliere njeri</h2>
           </span>
         </div>
-        <ScrollArrow name={"stats"}/>
+        <ScrollArrow name="stats"/>
       </div>
     </>
   );

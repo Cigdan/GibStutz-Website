@@ -7,8 +7,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     box-sizing: border-box;
-    width: 100%;
-    padding: 0 3%;
+    width: 100vw;
+    padding: 2rem 3%;
     align-items: center;
 
 }
@@ -111,6 +111,32 @@
 .iconTwitter svg {
     width: 60%;
     height: 60%;
+}
+
+.benchedButton {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.benchedButton h2 {
+    font-size: 24pt;
+    margin: 0;
+}
+
+.benchedButton svg {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.benchedOpen {
+    height: 100%;
+}
+.benchedClosed {
+    display: none;
 }
 
 @media screen and (max-width: 800px) {

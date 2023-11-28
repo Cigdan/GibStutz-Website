@@ -6,6 +6,7 @@ import { useContext } from "react";
 import RefsContext from "../../../context/RefsContext";
 
 import TeamCard from "./TeamCard";
+import Benched from "./Benched";
 
 export default function Team() {
   const { refs } = useContext(RefsContext);
@@ -39,6 +40,7 @@ export default function Team() {
           name="Stirogaming"
         />
       </div>
+      <Benched />
     </div>
   );
 }
