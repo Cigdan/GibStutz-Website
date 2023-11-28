@@ -25,3 +25,9 @@
 .text::first-letter {
     text-transform: uppercase;
 }
+
+@media screen and (max-width: 800px) {
+    .arrowContainer {
+        height: 80%;
+    }
+}
