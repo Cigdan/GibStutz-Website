@@ -1,14 +1,18 @@
 import layout from "./layout.module.scss";
 import logo from "../assets/images/logo.png";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import RefsContext from "../context/RefsContext";
 import { scrollToSection } from "../functions/routing";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
   const { setCurrentSection, refs } = useContext(RefsContext);
 
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   return (
+    <>
+    <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebaropen={setIsSidebarOpen} />
     <header className={layout.header}>
       <div>
         <img
@@ -42,7 +46,8 @@ export default function Header() {
           <li className="btn">Route #4</li>
         </ul>
       </nav>
-      <HiMenuAlt3 className={layout.burger} />
+      <HiMenuAlt3 onClick={() => setIsSidebarOpen(!isSidebarOpen)} className={layout.burger} />
     </header>
+    </>
   );
 }
