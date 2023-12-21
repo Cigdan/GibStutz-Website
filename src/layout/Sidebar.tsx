@@ -25,6 +25,7 @@ export default function Sidebar(props : SidebarProps) {
           height="100px"
           alt="GibStutz Logo"
         />
+        <hr className={layout.divider} />
             <ul className={layout.sidebarNav}>
                 <li onClick={() => sidebarScroll("home")}>Home</li>
                 <li onClick={() => sidebarScroll("stats")}>Stats</li>
