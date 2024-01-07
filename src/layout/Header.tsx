@@ -1,18 +1,20 @@
 import layout from "./layout.module.scss";
 import logo from "../assets/images/logo.png";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import RefsContext from "../context/RefsContext";
 import { scrollToSection } from "../functions/routing";
-import Sidebar from "./Sidebar";
 
-export default function Header() {
+type props = {
+  isSidebarOpen: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
+}
+
+export default function Header(props: props) {
   const { setCurrentSection, refs } = useContext(RefsContext);
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = props.isSidebarOpen;
   return (
     <>
-    <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebaropen={setIsSidebarOpen} />
     <header className={layout.header}>
       <div>
         <img

@@ -4,20 +4,20 @@ import RefsContext from "../context/RefsContext";
 import { scrollToSection } from "../functions/routing";
 import logo from "../assets/images/logo.png";
 
-type SidebarProps = {
-  isSidebarOpen: boolean;
-  setIsSidebaropen: (isSidebarOpen: boolean) => void;
+type props = {
+  isSidebarOpen: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
 }
 
-export default function Sidebar(props : SidebarProps) {
+export default function Sidebar(props : props) {
+  const [isSidebarOpen, setIsSidebarOpen] = props.isSidebarOpen;
   function sidebarScroll(target: string) {
     scrollToSection(target, refs, setCurrentSection)
-    props.setIsSidebaropen(false)
+    setIsSidebarOpen(false)
   }
   const { setCurrentSection, refs } = useContext(RefsContext);
   return (
-    <div onClick={() => props.setIsSidebaropen(false)} className={props.isSidebarOpen ?  layout.sidebarContainer : ""}>
-        <div onClick={(e) => e.stopPropagation()} className={`${layout.sideBar} ${props.isSidebarOpen ? layout.sidebarOpen : layout.sidebarClosed}`}>
+    <div onClick={() => setIsSidebarOpen(false)} className={isSidebarOpen ?  layout.sidebarContainer : ""}>
+        <div onClick={(e) => e.stopPropagation()} className={`${layout.sideBar} ${isSidebarOpen ? layout.sidebarOpen : layout.sidebarClosed}`}>
         <img
           onClick={() => scrollToSection("home", refs, setCurrentSection)}
           src={logo}

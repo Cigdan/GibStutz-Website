@@ -2,6 +2,7 @@ import Header from "./layout/Header";
 import LandingPage from "./components/landingPage/LandingPage";
 import RefsContext from "./context/RefsContext";
 import { useRef, useState } from "react";
+import Sidebar from "./layout/Sidebar";
 
 import {
   createBrowserRouter,
@@ -10,6 +11,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const refs = [
     { 
       name: "home",
@@ -35,7 +37,8 @@ function App() {
       path: "home",
       element: (
         <>
-          <Header />
+          <Header isSidebarOpen={[isSidebarOpen, setIsSidebarOpen]} />
+          <Sidebar isSidebarOpen={[isSidebarOpen, setIsSidebarOpen]} />
           <LandingPage />
         </>
       ),
