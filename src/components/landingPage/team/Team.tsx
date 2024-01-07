@@ -7,6 +7,7 @@ import RefsContext from "../../../context/RefsContext";
 
 import TeamCard from "./TeamCard";
 import Benched from "./Benched";
+import ScrollArrow from "../../misc/ScrollArrow";
 
 export default function Team() {
   const { refs } = useContext(RefsContext);
@@ -41,6 +42,7 @@ export default function Team() {
         />
       </div>
       <Benched />
+      <ScrollArrow name="accomplishments"/>
     </div>
   );
 }

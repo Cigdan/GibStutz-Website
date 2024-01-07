@@ -8,6 +8,7 @@ import { useContext, useEffect } from "react";
 import { scrollToSection } from "../../functions/routing";
 
 import RefsContext from "../../context/RefsContext";
+import Accomplishments from "./accomplishments/Accomplishments";
 
 export default function LandingPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,6 +31,7 @@ export default function LandingPage() {
       <span className={landingPage.mainContent}>
         <Stats />
         <Team />
+        <Accomplishments />
       </span>
     </>
   );
