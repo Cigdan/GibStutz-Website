@@ -34,7 +34,7 @@ function App() {
 
   const router = createBrowserRouter([
     {
-      path: "home",
+      path: "/",
       element: (
         <>
           <Header isSidebarOpen={[isSidebarOpen, setIsSidebarOpen]} />
@@ -45,8 +45,8 @@ function App() {
     },
     {
       path: "*",
-      element: <Navigate to="home" />,
-    },
+      element: <Navigate to="/" />,
+    }
   ]);
 
   return (
