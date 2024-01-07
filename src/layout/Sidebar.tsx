@@ -30,7 +30,7 @@ export default function Sidebar(props : props) {
                 <li onClick={() => sidebarScroll("home")}>Home</li>
                 <li onClick={() => sidebarScroll("stats")}>Stats</li>
                 <li onClick={() => sidebarScroll("team")} >Team</li>
-                <li onClick={() => sidebarScroll("home")} >Route #4</li>
+                <li onClick={() => sidebarScroll("accomplishments")} >Accomplishments</li>
             </ul>
         </div>
     </div>

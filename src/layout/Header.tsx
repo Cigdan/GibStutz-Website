@@ -45,7 +45,12 @@ export default function Header(props: props) {
           >
             Team
           </li>
-          <li className="btn">Route #4</li>
+          <li
+            onClick={() => scrollToSection("accomplishments", refs, setCurrentSection)}
+            className="btn"
+          >
+            Accomplishments
+          </li>
         </ul>
       </nav>
       <HiMenuAlt3 onClick={() => setIsSidebarOpen(!isSidebarOpen)} className={layout.burger} />
