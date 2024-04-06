@@ -18,12 +18,12 @@ const accomplishmentsData : accomplishmentsType = {
         {
             title: "Beat Babos Gaming in Community Voting",
             image: "Babos Gaming Logo",
-            url: "https://www.digitec.ch/de/page/age-of-empires-iv-session-und-community-voting-preis-jetzt-anmelden-und-abstimmen-21897"
+            url: "https://www.digitec.ch/de/page/age-of-empires-iv-session-und-community-voting-preis-jetzt-anmelden-und-abstimmen-21897",
         },
         {
             title: "Qualified for SEL Spring Series Challenger Division",
             image: "Swiss Esports League Logo",
-            url: "https://twitter.com/esportsleaguech/status/1508471265279062020"
+            url: "https://twitter.com/esportsleaguech/status/1508471265279062020",
         }
     ],
     "2022": [
@@ -31,9 +31,9 @@ const accomplishmentsData : accomplishmentsType = {
     "2023": [
     ],
     "2024": [
-        title: "6th Place at the Digitec Playground vol.12 Grümpi"
-        image: "https://cdn.freelogovectors.net/wp-content/uploads/2021/12/digitec-logo-freelogovectors.net_-400x341.png"
-        url: "https://www.faceit.com/en/championship/792bc22d-a55a-41cd-b9d7-6aeeda540305/digitec%20Playground%20Vol%2012%20-%20Counter-Strike%202%20-%20Grumpi/standings/leaderboard"
+        title: "6th Place at the Digitec Playground vol.12 Grümpi",
+        image: "https://cdn.freelogovectors.net/wp-content/uploads/2021/12/digitec-logo-freelogovectors.net_-400x341.png",
+        url: "https://www.faceit.com/en/championship/792bc22d-a55a-41cd-b9d7-6aeeda540305/digitec%20Playground%20Vol%2012%20-%20Counter-Strike%202%20-%20Grumpi/standings/leaderboard",
     ]
 }
 
