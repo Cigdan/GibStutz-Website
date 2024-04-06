@@ -31,9 +31,11 @@ const accomplishmentsData : accomplishmentsType = {
     "2023": [
     ],
     "2024": [
-        title: "6th Place at the Digitec Playground vol.12 Grümpi",
-        image: "https://cdn.freelogovectors.net/wp-content/uploads/2021/12/digitec-logo-freelogovectors.net_-400x341.png",
-        url: "https://www.faceit.com/en/championship/792bc22d-a55a-41cd-b9d7-6aeeda540305/digitec%20Playground%20Vol%2012%20-%20Counter-Strike%202%20-%20Grumpi/standings/leaderboard",
+        {
+            title: "6th Place at the Digitec Playground vol.12 Grümpi",
+            image: "https://cdn.freelogovectors.net/wp-content/uploads/2021/12/digitec-logo-freelogovectors.net_-400x341.png",
+            url: "https://www.faceit.com/en/championship/792bc22d-a55a-41cd-b9d7-6aeeda540305/digitec%20Playground%20Vol%2012%20-%20Counter-Strike%202%20-%20Grumpi/standings/leaderboard",
+        }
     ]
 }
 
