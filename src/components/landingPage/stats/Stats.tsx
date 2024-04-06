@@ -15,7 +15,7 @@ export default function Stats() {
     <div className={landingPage.content} ref={refs[1].ref}>
         <h1 className={landingPage.sectionTitle}>Stats</h1>
         <div className={stats.statCardContainer}>
-            <StatCard title="Tournaments Played" amount={[100,3]} icon={IoGameController}/>
+            <StatCard title="Tournaments Played" amount={[100,5]} icon={IoGameController}/>
             <StatCard title="Tournaments Won" amount={[100,0]} icon={IoTrophy}/>
             <StatCard title="Pricemoney Won" amount={[100,0]} icon={IoWallet} suffix="$"/>
         </div>
