@@ -1,7 +1,7 @@
 
 # GibStutz Website
 
-A Website for GibStutz (WIP)
+A Website for GibStutz
 
 
 ## Tech Stack
