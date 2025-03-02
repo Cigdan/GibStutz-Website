@@ -1,0 +1,61 @@
+:root {
+    --primary-bg: 46, 52, 64;
+    --secondary-bg: 59, 66, 82;
+    --tertiary-bg: 76, 86, 106;
+
+    --primary-text: 216, 222, 233;
+    --secondary-text: 229, 233, 240;
+
+    --accent-teal: 143, 188, 187;
+    --accent-blue-light: 136, 192, 208;
+    --accent-blue: rgb129, 161, 193;
+    --accent-blue-dark: 94, 129, 172;
+
+    --accent-red: 191, 97, 106;
+    --accent-orange: 208, 135, 112;
+    --accent-yellow: 235, 203, 139;
+    --accent-green: 163, 190, 140;
+    --accent-purple: 180, 142, 173;
+}
+
+body {
+    background-color: rgb(var(--primary-bg));
+    color: rgb(var(--primary-text));
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    color: rgb(var(--accent-blue-light));
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(var(--accent-blue));
+}
+
+.btn {
+    background-color: transparent;
+    color: rgb(var(--primary-text));
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Inter", "Arial", sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: rgb(var(--tertiary-bg));
+}
+
+button:hover {
+    background-color: var(--accent-blue);
+}
