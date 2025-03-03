@@ -8,7 +8,7 @@
 
     --accent-teal: 143, 188, 187;
     --accent-blue-light: 136, 192, 208;
-    --accent-blue: rgb129, 161, 193;
+    --accent-blue: 129, 161, 193;
     --accent-blue-dark: 94, 129, 172;
 
     --accent-red: 191, 97, 106;
@@ -26,9 +26,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    width: 100vw;
     max-height: 100vh;
     max-width: 100vw;
     overflow-x: hidden;
+    position: fixed;
 }
 
 a {
@@ -58,4 +60,20 @@ a:hover {
 
 button:hover {
     background-color: var(--accent-blue);
+}
+
+.separator {
+    width: 100%;
+    color: rgb(var(--accent-blue));
+}
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgb(var(--primary-text));
+}
+
+.subtitle {
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgb(var(--secondary-text));
 }

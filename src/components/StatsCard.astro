@@ -1,0 +1,41 @@
+---
+import "./globalStyles.css"
+import {Icon} from 'astro-icon/components'
+const {statsData} = Astro.props
+---
+
+<div class="card">
+  <Icon class="icon" name={statsData.icon}/>
+  <span class="card-title">{statsData.title}</span>
+  <span class="card-value">{statsData.value}</span>
+</div>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        overflow: hidden;
+        text-align: center;
+        background-color: rgba(var(--accent-blue), 0.3);
+        border-radius: 5px;
+    }
+    .icon {
+        width: 3rem;
+        height: 3rem;
+        fill: rgb(var(--primary-text));
+    }
+    .card-title {
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        color: rgb(var(--primary-text));
+        font-weight: bold;
+    }
+    .card-value {
+        font-size: 1.5rem;
+        color: rgb(var(--primary-text));
+        font-weight: bolder;
+    }
+</style>

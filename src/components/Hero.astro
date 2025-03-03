@@ -1,0 +1,111 @@
+---
+import "./globalStyles.css"
+import logo from "../assets/logo.png"
+import StatsCard from "./StatsCard.astro"
+import {Image} from 'astro:assets';
+
+const stats = [
+  {
+    title: "Tournaments Played",
+    value: 5,
+    startValue: 100,
+    icon: "play"
+  },
+  {
+    title: "Tournaments Won",
+    value: 0,
+    startValue: 100,
+    icon: 'trophy'
+  },
+  {
+    title: "Pricemoney Won",
+    value: 0,
+    startValue: 100,
+    icon: "circle-dollar-sign"
+  },
+]
+
+---
+<div class="container">
+  <div class="tag-container">
+    <div class="tagimage">
+      <Image src={logo} alt="GibStutz Logo" class="logo"/>
+    </div>
+    <div class="tagline">
+      <span class="title">GibStutz</span>
+      <span class="subtitle slogan">suscht Schliere njeri</span>
+      <i data-lucide="trophy"></i>
+      <hr class="separator"/>
+      <div class="stats-container">
+        {stats.map((stat) => (
+          <StatsCard statsData={stat}/>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    .tag-container {
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: absolute;
+        background-color: rgba(var(--primary-bg), 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+    }
+    .tagline {
+        line-height: 1.2;
+      display: flex;
+      flex-direction: column;
+    }
+    .logo {
+        width: 12rem;
+        height: 12rem;
+    }
+    .stats-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem
+    }
+
+    @media (max-width: 600px) {
+        .tag-container {
+            top: 8rem;
+            flex-direction: column;
+        }
+        .stats-container {
+            flex-direction: column;
+        }
+        .slogan {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .tag-container {
+            width: 90vw;
+        }
+        .logo {
+            display: none;
+        }
+    }
+    @media (min-width: 1201px) {
+        .tag-container {
+            left: 8rem;
+        }
+    }
+</style>
