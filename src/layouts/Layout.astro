@@ -1,6 +1,7 @@
 ---
 import {Image} from 'astro:assets';
 import logo from '../assets/logo.png';
+import longLogo from '../assets/logo-long.png';
 import "../components/globalStyles.css"
 ---
 <!doctype html>
@@ -22,9 +23,9 @@ import "../components/globalStyles.css"
     Video couldn't be loaded
   </video>
 </div>
-<header class="header">
+<header class="header desktop">
   <Image src={logo} alt="GibStutz Logo" class="logo"/>
-  <nav class="nav">
+  <nav class="nav desktop">
     <button class="btn">
       Team
     </button>
@@ -34,8 +35,10 @@ import "../components/globalStyles.css"
     <button class="btn">
       Placeholder
     </button>
-
   </nav>
+</header>
+<header class="header mobile">
+  <Image src={longLogo} alt="GibStutz Logo long" class="logo-long"/>
 </header>
 <slot/>
 </body>
@@ -73,7 +76,9 @@ import "../components/globalStyles.css"
             transform: scale(1.1);
         }
     }
-
+    .mobile {
+        display: none;
+    }
     .logo {
         transition: all ease-in-out 0.2s;
         width: 75px;
@@ -102,9 +107,22 @@ import "../components/globalStyles.css"
         z-index: -10;
     }
 
+    .logo-long {
+        width: 16rem;
+        height: auto;
+    }
+
     @media (max-width: 1000px) {
         .header {
             padding: 1rem 4rem;
+        }
+        .desktop {
+            display: none;
+        }
+        .mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
