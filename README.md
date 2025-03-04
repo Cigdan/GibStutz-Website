@@ -6,7 +6,7 @@ A Website for GibStutz
 
 ## Tech Stack
 
-**Client:** Typescript, React, Sass
+**Client:** Typescript, Astro, AlpineJS
 
 
 
