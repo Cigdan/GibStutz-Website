@@ -1,0 +1,132 @@
+---
+import "./globalStyles.css";
+import PlayerCard from "./PlayerCard.astro";
+
+const people = [
+  {
+    type: "coach",
+    name: "bourb0n1412",
+    image: "bourb0n1412.jpg",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "Cigdan",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "had3s_jr",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "rl13basket",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "tofu",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "Placeholder",
+    benched: false,
+  },
+  {
+    type: "player",
+    name: "Eco",
+    benched: true,
+  },
+  {
+    type: "player",
+    name: "Scrylone",
+    benched: true,
+  },
+  {
+    type: "player",
+    name: "Stirogaming",
+    benched: true,
+  },
+];
+---
+
+<div class="container">
+  <span class="title">Meet the Team</span>
+  <div class="lineup-container">
+    <div class="category">
+      <span class="category-title subtitle-secondary">Coach</span>
+      <div class="list">
+        {
+          people.map((person) => {
+            if (person.type === "coach" && person.benched === false) {
+              return <PlayerCard person={person} />;
+            }
+          })
+        }
+      </div>
+    </div>
+    <div class="category">
+      <span class="category-title subtitle-secondary">Active Roster</span>
+      <div class="list">
+        {
+          people.map((person) => {
+            if (person.type === "player" && person.benched === false) {
+              return <PlayerCard person={person} />;
+            }
+          })
+        }
+      </div>
+    </div>
+    <div class="category">
+      <span class="category-title subtitle-secondary">Benched Players</span>
+      <div class="list">
+        {
+          people.map((person) => {
+            if (person.type === "player" && person.benched === true) {
+              return <PlayerCard person={person} />;
+            }
+          })
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lineup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .category-title {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>

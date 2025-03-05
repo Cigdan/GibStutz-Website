@@ -1,134 +1,130 @@
 ---
-import {Image} from 'astro:assets';
-import logo from '../assets/logo.png';
-import longLogo from '../assets/logo-long.png';
-import "../components/globalStyles.css"
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+import longLogo from "../assets/logo-long.png";
+import "../components/globalStyles.css";
 ---
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <meta name="generator" content={Astro.generator}/>
-  <title>GibStutz</title>
-</head>
-<body>
-<div class="video-container">
-  <video autoPlay muted loop>
-    <source
-            src="https://res.cloudinary.com/dvvmyybrf/video/upload/f_auto:video,q_auto/zdqa9eety3917xwzbwrh#10"
-            type="video/mp4"
-    />
-    Video couldn't be loaded
-  </video>
-</div>
-<header class="header desktop">
-  <Image src={logo} alt="GibStutz Logo" class="logo"/>
-  <nav class="nav desktop">
-    <button class="btn">
-      Team
-    </button>
-    <button class="btn">
-      Accomplishments
-    </button>
-    <button class="btn">
-      Placeholder
-    </button>
-  </nav>
-</header>
-<header class="header mobile">
-  <Image src={longLogo} alt="GibStutz Logo long" class="logo-long"/>
-</header>
-<slot/>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>GibStutz</title>
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source
+          src="https://res.cloudinary.com/dvvmyybrf/video/upload/f_auto:video,q_auto/zdqa9eety3917xwzbwrh#10"
+          type="video/mp4"
+        />
+        Video couldn't be loaded
+      </video>
+    </div>
+    <header class="header desktop">
+      <Image src={logo} alt="GibStutz Logo" class="logo" />
+      <nav class="nav desktop">
+        <button class="btn"> Team </button>
+        <button class="btn"> Accomplishments </button>
+        <button class="btn"> Placeholder </button>
+      </nav>
+    </header>
+    <header class="header mobile">
+      <Image src={longLogo} alt="GibStutz Logo long" class="logo-long" />
+    </header>
+    <slot />
+  </body>
 </html>
 
 <style>
-    html,
-    body {
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        max-width: 100vw;
-    }
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 100vw;
+  }
 
+  .header {
+    box-sizing: border-box;
+    transition: all ease-in-out 0.2s;
+    z-index: 100;
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    padding: 0.5rem 6rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(var(--primary-bg), 0.2);
+  }
+
+  .header:hover {
+    background-color: rgba(var(--primary-bg), 0.8);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    .logo {
+      transform: scale(1.1);
+    }
+  }
+  .mobile {
+    display: none;
+  }
+  .logo {
+    transition: all ease-in-out 0.2s;
+    width: 75px;
+    height: 75px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: rgba(var(--secondary-bg), 0.5);
+  }
+
+  .video-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .video-container video {
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    z-index: -10;
+  }
+
+  .logo-long {
+    width: 16rem;
+    height: auto;
+  }
+
+  @media (max-width: 1000px) {
     .header {
-        box-sizing: border-box;
-        transition: all ease-in-out 0.2s;
-        z-index: 100;
-        width: 100%;
-        max-width: 100vw;
-        border-radius: 5px;
-        position: fixed;
-        display: flex;
-        padding: 0.5rem 6rem;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(var(--primary-bg), 0.2);
+      padding: 1rem 4rem;
     }
-
-    .header:hover {
-        background-color: rgba(var(--primary-bg), 0.8);
-        padding-bottom: 1rem;
-        padding-top: 1rem;
-        .logo {
-            transform: scale(1.1);
-        }
+    .desktop {
+      display: none;
     }
     .mobile {
-        display: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .logo {
-        transition: all ease-in-out 0.2s;
-        width: 75px;
-        height: 75px;
-    }
+  }
 
-    .nav {
-        display: flex;
-        gap: 2rem;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        background-color: rgba(var(--secondary-bg), 0.5);
+  @media (max-width: 600px) {
+    .header {
+      padding: 1rem 1rem;
     }
-
-    .video-container {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-    }
-
-    .video-container video {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        opacity: 30%;
-        z-index: -10;
-    }
-
-    .logo-long {
-        width: 16rem;
-        height: auto;
-    }
-
-    @media (max-width: 1000px) {
-        .header {
-            padding: 1rem 4rem;
-        }
-        .desktop {
-            display: none;
-        }
-        .mobile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .header {
-            padding: 1rem 1rem;
-        }
-    }
+  }
 </style>
