@@ -1,41 +1,64 @@
 ---
-import "./globalStyles.css"
-import {Icon} from 'astro-icon/components'
-const {statsData} = Astro.props
+import "./globalStyles.css";
+import { Icon } from "astro-icon/components";
+const { statsData } = Astro.props;
 ---
 
-<div class="card">
-  <Icon class="icon" name={statsData.icon}/>
-  <span class="card-title">{statsData.title}</span>
-  <span class="card-value">{statsData.value}</span>
+<div
+  class="card"
+  x-data="{
+    value: $el.getAttribute('data-value'), 
+    title: $el.getAttribute('data-title'), 
+    startValue: $el.getAttribute('data-start'),
+    suffix: $el.getAttribute('data-suffix'),
+    countdown() {
+    const start = this.startValue;
+      let interval = setInterval(() => {
+        this.startValue = this.startValue - (Math.round(start / 100));
+        if (this.startValue <= this.value) {
+          this.startValue = this.value;
+          clearInterval(interval)
+        };
+      }, 25);
+    }
+  }"
+  data-value={statsData.value}
+  data-title={statsData.title}
+  data-start={statsData.startValue}
+  data-suffix={statsData.suffix}
+  x-init="countdown()"
+>
+  <Icon class="icon" name={statsData.icon} />
+  <span class="card-title" x-text="title"></span>
+  <span class="card-value" x-text="startValue + ' ' + suffix"></span>
 </div>
 
 <style>
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        overflow: hidden;
-        text-align: center;
-        background-color: rgba(var(--accent-blue), 0.3);
-        border-radius: 5px;
-    }
-    .icon {
-        width: 3rem;
-        height: 3rem;
-        fill: rgb(var(--primary-text));
-    }
-    .card-title {
-        padding-top: 1rem;
-        font-size: 1.5rem;
-        color: rgb(var(--primary-text));
-        font-weight: bold;
-    }
-    .card-value {
-        font-size: 1.5rem;
-        color: rgb(var(--primary-text));
-        font-weight: bolder;
-    }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(var(--accent-blue), 0.3);
+    border-radius: 5px;
+  }
+  .icon {
+    width: 3rem;
+    height: 3rem;
+    fill: rgb(var(--primary-text));
+  }
+  .card-title {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: rgb(var(--primary-text));
+    font-weight: bold;
+  }
+  .card-value {
+    font-size: 1.5rem;
+    color: rgb(var(--primary-text));
+    font-weight: bolder;
+  }
 </style>
